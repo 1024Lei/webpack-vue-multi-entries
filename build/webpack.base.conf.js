@@ -31,6 +31,7 @@ glob.sync('./src/pages/**/index.js').forEach(function (path) {
   const chunk = path.split('./src/pages/')[1].split('/index.js')[0]
   entries[chunk] = path
   chunks.push(chunk)
+  const filename = chunk + '/index.html'
   const htmlConf = {
     title: chunk,
     filename: filename,
